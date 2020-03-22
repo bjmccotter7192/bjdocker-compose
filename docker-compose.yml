@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  f5api:
+    image: "python-api:latest"
+    container_name: pythonapi
+    restart: unless-stopped
