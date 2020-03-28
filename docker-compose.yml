@@ -1,6 +1,15 @@
 version: '3.7'
 services:
-  f5api:
+  python-api:
     image: "python-api:latest"
-    container_name: pythonapi
+    container_name: python-api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  angular-ui:
+    image: "angular-ui:latest"
+    container_name: angular-ui
+    ports:
+      - "80:80"
     restart: unless-stopped
